@@ -1,4 +1,4 @@
-package com.example.git_practice
+package com.example.gitpractice
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
@@ -9,5 +9,4 @@ class GitPracticeApplicationTests {
     @Test
     fun contextLoads() {
     }
-
 }

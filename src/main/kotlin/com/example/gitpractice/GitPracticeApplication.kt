@@ -1,4 +1,4 @@
-package com.example.git_practice
+package com.example.gitpractice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

@@ -1,0 +1,17 @@
+feature:
+  - '(?i)feature'
+
+cicd:
+  - '(?i)cicd'
+
+fix:
+  - '(?i)fix'
+
+test:
+  - '(?i)test'
+
+refactor:
+  - '(?i)refactor'
+
+docs:
+  - '(?i)docs'

@@ -1,19 +1,19 @@
-name: "Issue Labeler"
+name: PR Labeler
 on:
   pull_request:
     types: [opened, ready_for_review]
 
 permissions:
-  issues: write
   contents: read
 
 jobs:
-  triage:
+  pr-labeler:
+    permissions:
+      contents: read # for TimonVS/pr-labeler-action to read config file
+      pull-requests: write # for TimonVS/pr-labeler-action to add labels in PR
     runs-on: ubuntu-latest
     steps:
-      - uses: github/issue-labeler@v3.1 #May not be the latest version
+      - uses: TimonVS/pr-labeler-action@v4
         with:
-          configuration-path: .github/labeler.yml
-          include-title: 1
-          enable-versioned-regex: 0
-          repo-token: ${{ github.token }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration-path: .github/labeler.yml # optional, .github/pr-labeler.yml is the default value
